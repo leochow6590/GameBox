@@ -1,0 +1,98 @@
+.gameBlock{
+    border-radius: 25px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.5);
+    height: 330px;
+    max-width: 300px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--bgColor);
+    margin-bottom: 40px;
+}
+
+.gameBlock img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px 25px 0 0 ;
+    margin-bottom: 10px;
+}
+
+.addFavorite{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    color: white;
+    background-color: var(--bgColor);
+    border-radius: 0px 22px 0px 15px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.addFavorite .active, .addFavorite:hover{
+    color: var(--secondColor);
+}
+
+.gameInfo{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    padding-left: 10px;
+}
+
+.gameTitle {
+    font-family: 'Bauhaus 93 V2';
+    font-size: 1.2rem;
+    text-wrap:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gameReleaseDate, .gameRating,.gameGenres, .gamePlatforms{
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.gameInfo i{
+    margin-right: 10px;
+}
+
+.gamePlatform, .gameGenre{
+    background-color: var(--secondColor);
+    display:inline-block;
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    font-weight: 800;
+
+}
+
+.gamePlatform{
+    filter: grayscale(80%);
+}
+
+.seeDetail{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    color: white;
+    background-color: var(--bgColor);
+    border-radius: 22px 0px 15px 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: 0.2s;
+}
+
+.seeDetail:hover{
+    color: var(--secondColor);
+  
+}

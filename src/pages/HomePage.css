@@ -1,0 +1,13 @@
+.showMore{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.showMore:hover{
+    color: var(--secondColor);
+}
+
+.row{
+    margin-bottom: 5px;
+}
