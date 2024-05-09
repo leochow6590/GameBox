@@ -1,14 +1,36 @@
 import React from "react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import NavBar from "../components/NavBar.jsx"
 import HomePage from "./HomePage.jsx"
-import { data } from "../data/gameData.js"
+import { gameData } from "../data/gameData.js"
 import "./MainPage.css"
 import Header from "../components/Header.jsx"
+import CatPage from "./CatPage.jsx"
+import MyFavPage from "./MyFavPage.jsx"
 
 function MainPage() {
   const [fullNavbar, SetFullNavbar] = useState("true")
-  const [gameData, setGameData] = useState(data.results)
+  const [games, setGames] = useState(gameData.results)
+
+  const homeRef = useRef()
+  const catRef = useRef()
+  const myFavRef = useRef()
+
+  const sections = [
+    { name: "homePage", ref: homeRef, active: true },
+    { name: "catPage", ref: catRef, active: false },
+    { name: "myFavPage", ref: myFavRef, active: false },
+  ]
+
+  const handleSectionsActivity = (des) => {
+    sections.map((section) => {
+      section.ref.current.id === des
+        ? section.ref.current.classList.add("active")
+        : section.ref.current.classList.remove("active")
+      return section
+    })
+  }
+
   // useEffect(() => {
   //   fetch(
   //     "https://api.rawg.io/api/games?key=a4d3a18a2a4f4409b68fdbede271138d&page_size=20"
@@ -26,11 +48,16 @@ function MainPage() {
 
   return (
     <main>
-      <NavBar fullNavbar={fullNavbar} />
+      <NavBar
+        fullNavbar={fullNavbar}
+        sectionActivity={handleSectionsActivity}
+      />
       <div className={`mainContent ${fullNavbar ? undefined : "full"}`}>
         <Header navbarToggle={navbarToggle} />
         <div className="container-fluid">
-          <HomePage gameData={gameData} />
+          <HomePage gameData={games} reference={homeRef} />
+          <CatPage gameData={games} reference={catRef} />
+          <MyFavPage gameData={games} reference={myFavRef} />
         </div>
       </div>
     </main>

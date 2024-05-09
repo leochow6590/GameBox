@@ -38,16 +38,22 @@ section {
     position: absolute;
     padding: 0 30px 0 30px;
     height: auto;
-    overflow-y: visible;
-    opacity: 1;
+    overflow: hidden;
+    opacity: 0;
     z-index: 1000;
     width: 100%;
     bottom: 0;
-    top: 100px;
-    transition: ease-in-out 1s;
-    transform-origin: bottom;
+    top: 100vh;
+    transition: ease-in-out 0.5s;
+    transform-origin:center;
+
 }
 
 section::-webkit-scrollbar{
     display: none; 
+}
+
+section.active{
+    opacity: 1;
+    top:100px;
 }

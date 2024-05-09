@@ -1,20 +1,23 @@
 const navData = [
     {
         id: '1',
-        des: 'home',
+        des: 'homePage',
         name: 'Home',
         icon: 'bi bi-house',
+        active: true
     },
     {
         id: '2',
-        des: 'categories',
+        des: 'catPage',
         name: 'Categories',
         icon: 'bi bi-grid',
+        active: false
     },{
         id: '3',
-        des: 'myfavorite',
+        des: 'myFavPage',
         name: 'My Favorite',
         icon: 'bi bi-heart',
+        active: false
     }
 ]
 

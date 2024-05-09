@@ -1,4 +1,4 @@
-export const data ={
+export const gameData ={
     "count": 866601,
     "next": "https://api.rawg.io/api/games?key=a4d3a18a2a4f4409b68fdbede271138d&page=2",
     "previous": null,

@@ -4,9 +4,9 @@ import "./HomePage.css"
 import SwipeWindow from "../components/SwipeWindow"
 import GameBlock from "../components/GameBlock"
 
-function HomePage({ gameData }) {
+function HomePage({ gameData, reference }) {
   return (
-    <section id="homePage" className="homePage">
+    <section id="homePage" className="homePage active" ref={reference}>
       <div className="container-fluid">
         <div className="row">
           <SwipeWindow gameData={gameData} />

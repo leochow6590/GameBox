@@ -1,0 +1,7 @@
+.genres{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    gap: 15px;
+    list-style: none;
+}
