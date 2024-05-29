@@ -1,7 +1,49 @@
-.genres{
-    display: flex;
-    flex-wrap: wrap;
+.genres, .orderings{
+    display: inline-flex;
+    flex-wrap: wrap ;
+    align-items: center;
+    font-size: 1rem;
+    gap: 10px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+
+.catPage .gamesDisplay{
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+span.catSubTitle {
     color: white;
-    gap: 15px;
-    list-style: none;
+    font-size: 1.1rem;
+} 
+
+.search{
+    color: white;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    width: 100%;
+}
+
+.search i{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.search input{
+    outline: none;
+    border: none;
+    background: transparent;
+    color: white;
+    width: 90%;
+}
+
+.search input::placeholder{
+    color: white;
 }

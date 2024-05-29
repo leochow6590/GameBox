@@ -1,23 +1,32 @@
 .gameBlock{
     border-radius: 25px;
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.5);
-    height: 330px;
-    max-width: 300px;
+    height:310px;
+    width: 220px;
     position: relative;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--bgColor);
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-.gameBlock img{
-    object-fit: cover;
-    object-position: center;
+.gameBlock .imgContainer{
+    
+    height: 123px;
     border-radius: 25px 25px 0 0 ;
     margin-bottom: 10px;
 }
 
-.addFavorite{
+.gameBlock img{
+    object-fit:cover;
+    object-position: center;
+    border-radius: 25px 25px 0 0 ;
+    width: 100%;
+    max-height: 123px;
+}
+
+
+.gameBlock .addFavorite{
     position: absolute;
     top: 0;
     right: 0;
@@ -32,26 +41,28 @@
     transition: 0.2s;
 }
 
-.addFavorite .active, .addFavorite:hover{
+.gameBlock .addFavorite.active, .gameBlock .addFavorite:hover{
     color: var(--secondColor);
 }
 
-.gameInfo{
+.gameBlock .gameInfo{
     display: flex;
     flex-direction: column;
     gap:5px;
     padding-left: 10px;
+    
+ 
 }
 
-.gameTitle {
+.gameBlock .gameTitle {
     font-family: 'Bauhaus 93 V2';
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-wrap:nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.gameReleaseDate, .gameRating,.gameGenres, .gamePlatforms{
+.gameBlock .gameReleaseDate, .gameBlock .gameRating,.gameBlock .gameGenres, .gameBlock .gamePlatforms{
     display: inline-block;
     font-size: 0.8rem;
 }
@@ -60,7 +71,7 @@
     margin-right: 10px;
 }
 
-.gamePlatform, .gameGenre{
+.gameBlock .gamePlatform, .gameBlock .gameGenre{
     background-color: var(--secondColor);
     display:inline-block;
     margin-right: 5px;
@@ -72,11 +83,11 @@
 
 }
 
-.gamePlatform{
+.gameBlock .gamePlatform{
     filter: grayscale(80%);
 }
 
-.seeDetail{
+.gameBlock .seeDetail{
     position: absolute;
     top: 0%;
     left: 0;
@@ -92,7 +103,7 @@
     transition: 0.2s;
 }
 
-.seeDetail:hover{
+.gameBlock .seeDetail:hover{
     color: var(--secondColor);
   
 }

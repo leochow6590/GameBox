@@ -38,10 +38,11 @@ header{
 
 .userInfo .icon .liked{
     position: absolute;
+    color: var(--bgColor);
     right: 0px;
     bottom: 10px;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 800;
     border-radius: 50%;
     background-color: var(--secondColor);
     display: flex;
@@ -53,7 +54,8 @@ header{
 }
 
 .userInfo .icon:hover{
-    background-color: var(--secondColor);
+    background-color: white;
+    color: var(--bgColor);
 }
 
 .userCard {

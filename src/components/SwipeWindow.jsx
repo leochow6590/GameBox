@@ -10,9 +10,10 @@ import SlideContent from "./SlideContent"
 function SwipeWindow({ gameData }) {
   return (
     <Swiper
+      direction={gameData[0].name ? "horizontal" : "vertical"}
       className="swipeWindow"
       slidesPerView={"auto"}
-      // autoplay={{ delay: 2000, disableOnInteraction: false }}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       modules={[EffectCoverflow, Autoplay, Navigation]}
       loop={true}
       effect={"coverflow"}
