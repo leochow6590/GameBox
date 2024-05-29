@@ -1,22 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react"
 import "./NavBar.css"
 import NavItem from "./NavItem"
-import navData from "../data/navData"
 
-function NavBar({ fullNavbar, sectionActivity }) {
-  const [navItem, setNavData] = useState(navData)
-
-  const handleNavActivity = (id, des) => {
-    setNavData(
-      navItem.map((item) => {
-        item.id === id ? (item.active = true) : (item.active = false)
-        return item
-      })
-    )
-    sectionActivity(des)
-  }
-
+function NavBar({ navItem, fullNavbar, navActivity }) {
   return (
     <div className={`navBar ${fullNavbar ? undefined : "small"}`}>
       <a herf="#" className="logo">
@@ -25,7 +12,7 @@ function NavBar({ fullNavbar, sectionActivity }) {
       </a>
       <ul className="nav">
         {navItem.map((item) => (
-          <NavItem key={item.id} item={item} navOnClick={handleNavActivity} />
+          <NavItem key={item.id} item={item} navOnClick={navActivity} />
         ))}
       </ul>
     </div>

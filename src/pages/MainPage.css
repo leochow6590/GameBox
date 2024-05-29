@@ -18,7 +18,7 @@ main{
 
 .mainContent {
     position: relative;
-    width: 80%;
+    width: 85%;
     height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.5);
@@ -43,8 +43,9 @@ section {
     z-index: 1000;
     width: 100%;
     bottom: 0;
+    right: 0;
     top: 100vh;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.75s;
     transform-origin:center;
 
 }
