@@ -10,24 +10,33 @@ function DetailPage({ sectionActivity, reference }) {
 
   const fetchGameData = async () => {
     if (detail !== 0) {
-      console.log("detailfetchtest")
       const res1 = await fetch(
         `https://api.rawg.io/api/games/${detail}?key=a4d3a18a2a4f4409b68fdbede271138d`
       )
-      const data1 = await res1.json()
-      setGameData(data1)
+      const rawData = await res1.json()
+      const dataList = await {
+        id: rawData.id,
+        name: rawData.name,
+        genres: rawData.genres,
+        parent_platforms: rawData.parent_platforms,
+        rating: rawData.rating,
+        released: rawData.released,
+        background_image: rawData.background_image,
+        developers: rawData.developers,
+        publishers: rawData.publishers,
+        description_raw: rawData.description_raw,
+      }
+      setGameData(dataList)
       const res2 = await fetch(
         `https://api.rawg.io/api/games/${detail}/screenshots?key=a4d3a18a2a4f4409b68fdbede271138d`
       )
       const data2 = await res2.json()
       setScreenshots(data2.results)
-      console.log(data2.results)
     }
   }
 
   useEffect(() => {
     fetchGameData()
-    console.log("effect")
   }, [detail])
 
   const handleBackPage = () => {}

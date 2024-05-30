@@ -36,8 +36,17 @@ function CatPage({ gameData, reference }) {
       }&ordering=-${ordering}&search=${searchString}
       &search_exact=false&key=a4d3a18a2a4f4409b68fdbede271138d`
     )
-    const data = await res.json()
-    setGames(data.results)
+    const rawData = await res.json()
+    const dataList = await rawData.results.map((game) => ({
+      id: game.id,
+      name: game.name,
+      genres: game.genres,
+      parent_platforms: game.parent_platforms,
+      rating: game.rating,
+      released: game.released,
+      background_image: game.background_image,
+    }))
+    setGames(dataList)
   }
 
   const handleSelectGenre = (e) => {
