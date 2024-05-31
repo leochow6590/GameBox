@@ -19,14 +19,20 @@ function MainPage() {
   const [prevPage, setPrevPage] = useState("homePage")
 
   const fetchGameData = async () => {
-    console.log("1")
     const res = await fetch(
       "https://api.rawg.io/api/games?key=a4d3a18a2a4f4409b68fdbede271138d&page_size=20"
     )
-    console.log("2")
-    const data = await res.json()
-    console.log("3")
-    setGames(data.results)
+    const rawData = await res.json()
+    const dataList = await rawData.results.map((game) => ({
+      id: game.id,
+      name: game.name,
+      genres: game.genres,
+      parent_platforms: game.parent_platforms,
+      rating: game.rating,
+      released: game.released,
+      background_image: game.background_image,
+    }))
+    setGames(dataList)
   }
 
   useEffect(() => {
@@ -76,7 +82,7 @@ function MainPage() {
   }
 
   useEffect(() => {
-    detail !== 0 ? handleSectionActivity("detailPage") : console.log("")
+    detail !== 0 ? handleSectionActivity("detailPage") : undefined
   }, [detail])
 
   return (

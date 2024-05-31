@@ -15,7 +15,6 @@ function GameBlock({ game }) {
 
   const handleShowDetail = (game) => {
     setDetail(game.id)
-    console.log(detail)
   }
 
   return (
@@ -36,10 +35,10 @@ function GameBlock({ game }) {
           <a
             href="#"
             className={`addFavorite ${
-              favorite.includes(game) ? "active" : undefined
+              favorite.some((fav) => fav.id == game.id) ? "active" : undefined
             }`}
             onClick={
-              favorite.includes(game)
+              favorite.some((fav) => fav.id == game.id)
                 ? () => handleRemovefavorite(game)
                 : () => handleAddFavorite(game)
             }
