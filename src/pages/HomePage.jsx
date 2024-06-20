@@ -27,8 +27,8 @@ function HomePage({ gameData, reference, navActivity }) {
             </a>
           </div>
         </div>
-        <div className="row">
-          {gameData.slice(0, 6).map((game) => (
+        <div className="row homeGames">
+          {gameData.map((game) => (
             <GameBlock key={game.id} game={game} />
           ))}
         </div>

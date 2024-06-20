@@ -4,10 +4,22 @@
     text-decoration: none;
     transition: 0.2s;
 }
+
 .showMore:hover{
     color: var(--secondColor);
 }
 
-.row{
+.homePage .row{
     margin-bottom: 5px;
 }
+
+.homePage{
+    overflow-y: scroll;
+}
+
+
+@media screen and (max-width: 600px) {
+    .showMore{
+        display: none;
+    }
+  }

@@ -20,6 +20,8 @@ header{
     display: inline-flex;
     align-items: center;
     gap: 20px;
+    margin-right: 0px;
+    margin-left: auto;
 }
 
 .userInfo .icon{
@@ -91,3 +93,9 @@ header{
 .userCard .userName a:hover{
     color: var(--secondColor);
 }
+
+@media screen and (max-width: 992px) {
+    .sidebarToggle{
+        display: none;
+    }
+  }

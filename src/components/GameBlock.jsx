@@ -57,6 +57,7 @@ function GameBlock({ game }) {
             </div>
             <div className="gameGenres">
               <i className="bi bi-grid"></i>
+
               {game.genres
                 ? game.genres.map((genre) => (
                     <div key={genre.id} className="gameGenre">
@@ -67,6 +68,7 @@ function GameBlock({ game }) {
             </div>
             <div className="gamePlatforms">
               <i className="bi bi-display"></i>
+
               {game.parent_platforms
                 ? game.parent_platforms.map((platform) => (
                     <div key={platform.platform.id} className="gamePlatform">

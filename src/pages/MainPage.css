@@ -10,7 +10,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     overflow: hidden;
     transition: 0.5s;
 
@@ -30,13 +30,13 @@ main{
 /* full page mainContent css */
 .mainContent.full {
     position: relative;
-    width: 95%;
+    width: 96%;
     transition: 1s;
 }
 
 section {
     position: absolute;
-    padding: 0 30px 0 30px;
+    padding: 0 10px 0 30px;
     height: auto;
     overflow: hidden;
     opacity: 0;
@@ -47,14 +47,26 @@ section {
     top: 100vh;
     transition: ease-in-out 0.75s;
     transform-origin:center;
-
+    margin-right: 10px;
 }
 
-section::-webkit-scrollbar{
-    display: none; 
+section::-webkit-scrollbar-track{
+    margin-bottom: 20px;
 }
 
 section.active{
     opacity: 1;
     top:100px;
+}
+
+.mainContent .loading{
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 992px) {
+    .mainContent {
+        position: relative;
+        width: 96%;
+        transition: 1s;
+    }
 }
