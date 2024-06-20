@@ -20,7 +20,7 @@ function MainPage() {
 
   const fetchGameData = async () => {
     const res = await fetch(
-      "https://api.rawg.io/api/games?key=a4d3a18a2a4f4409b68fdbede271138d&page_size=20"
+      "https://api.rawg.io/api/games?key=e04c7205173549438db3ea11f6455655&page_size=20"
     )
     const rawData = await res.json()
     const dataList = await rawData.results.map((game) => ({
@@ -95,7 +95,7 @@ function MainPage() {
       <div className={`mainContent ${fullNavbar ? undefined : "full"}`}>
         <Header navbarToggle={navbarToggle} navActivity={handleNavActivity} />
         <div className="container-fluid">
-          {games.length > 0 && (
+          {games.length > 0 ? (
             <>
               <HomePage
                 gameData={games}
@@ -109,6 +109,10 @@ function MainPage() {
                 reference={detailRef}
               />
             </>
+          ) : (
+            <h3 className="loading">
+              Loading, please try to refresh if it takes more than 10 seconds.
+            </h3>
           )}
         </div>
       </div>

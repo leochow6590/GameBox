@@ -3,7 +3,8 @@
     height: 100%;
     top: 0;
     margin-bottom: auto;
-    padding: 30px;
+    padding: 20px;
+    padding-top: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     background: var(--bgColor);
@@ -19,34 +20,38 @@
 .navBar .logo{
     font-family: 'Bauhaus 93 V2';
     align-items: center;
+    justify-content: center;
     position: relative;
     display: inline-flex;
     gap: 15px;
     color: white;
-    font-size: 2em;
+    font-size: 1.8vw;
     letter-spacing: 1px;
 }
+
 
 .navBar .nav{
     margin-top: 40px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     list-style: none;
     gap: 30px;
 }
 
-
 .navBar .nav li a{
     display: inline-flex;
+    align-items: center;
     gap: 15px;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.2vw;
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 20px;
-    padding: 5px 15px;
+    padding: 5px 10px;
     transition: 0.5s;
 }
+
 
 .navBar .nav li a:hover,
 .navBar .nav li a.active
@@ -59,12 +64,59 @@
 /* small navBar css below */
 
 .navBar.small{
-    width: 5%;
+    width: 4%;
     transition: 1s;
     overflow: hidden;
     align-items: center;
 }
 
+.navBar.small .logo i{
+    font-size: 2rem;
+}
+
+.navBar.small .nav i{
+    font-size: 1rem;
+}
+    
+
+
 .navBar.small .brand, .navBar.small .navName {
     display: none;
 }
+
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+    /* .navBar {
+        width: 3%;
+        transition: 1s;
+        overflow: hidden;
+        align-items: center;
+    }
+    .navBar .brand, .navBar .navName {
+        display: none;
+    }
+    .navBar .nav i{
+        font-size: 1rem;
+    }
+    .navBar .logo i{
+        font-size: 2rem;
+    } */
+  }
+
+@media screen and (max-width: 992px) {
+    .navBar {
+        width: 4%;
+        transition: 1s;
+        overflow: hidden;
+        align-items: center;
+    }
+    .navBar .brand, .navBar .navName {
+        display: none;
+    }
+    .navBar .nav i{
+        font-size: 1rem;
+        
+    }
+    .navBar .logo i{
+        font-size: 2rem;
+    }
+  }

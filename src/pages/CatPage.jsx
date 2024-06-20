@@ -13,7 +13,6 @@ function CatPage({ gameData, reference }) {
     id: genre.id,
     value: genre.id,
     label: genre.name,
-    //active: false,
   }))
   genres.unshift({ id: "0", value: 0, label: "All" })
 
@@ -34,7 +33,7 @@ function CatPage({ gameData, reference }) {
       `https://api.rawg.io/api/games?${
         genre != 0 ? "genres=" + genre : ""
       }&ordering=-${ordering}&search=${searchString}
-      &search_exact=false&key=a4d3a18a2a4f4409b68fdbede271138d`
+      &search_exact=false&key=e04c7205173549438db3ea11f6455655`
     )
     const rawData = await res.json()
     const dataList = await rawData.results.map((game) => ({

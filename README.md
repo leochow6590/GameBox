@@ -1,4 +1,5 @@
 # GameBox
+
 Created by: Leo Chow
 
 This is a game showcasing web-application built with React.JS, Spring and MySQL. Only front-end features are shown in the link below due to the restriction of GitHub Pages.

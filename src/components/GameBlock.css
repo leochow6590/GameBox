@@ -8,10 +8,10 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--bgColor);
     margin-bottom: 50px;
+    overflow: hidden;
 }
 
 .gameBlock .imgContainer{
-    
     height: 123px;
     border-radius: 25px 25px 0 0 ;
     margin-bottom: 10px;
@@ -48,23 +48,26 @@
 .gameBlock .gameInfo{
     display: flex;
     flex-direction: column;
+    height:170px;
     gap:5px;
     padding-left: 10px;
-    
- 
 }
 
 .gameBlock .gameTitle {
     font-family: 'Bauhaus 93 V2';
     font-size: 1.1rem;
     text-wrap:nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .gameBlock .gameReleaseDate, .gameBlock .gameRating,.gameBlock .gameGenres, .gameBlock .gamePlatforms{
-    display: inline-block;
+    display: -webkit-box;
     font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .gameInfo i{
@@ -80,7 +83,6 @@
     font-size: 0.7rem;
     border-radius: 5px;
     font-weight: 800;
-
 }
 
 .gameBlock .gamePlatform{

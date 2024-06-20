@@ -11,10 +11,10 @@ function DetailPage({ sectionActivity, reference }) {
   const fetchGameData = async () => {
     if (detail !== 0) {
       const res1 = await fetch(
-        `https://api.rawg.io/api/games/${detail}?key=a4d3a18a2a4f4409b68fdbede271138d`
+        `https://api.rawg.io/api/games/${detail}?key=e04c7205173549438db3ea11f6455655`
       )
       const rawData = await res1.json()
-      const dataList = await {
+      const dataList = {
         id: rawData.id,
         name: rawData.name,
         genres: rawData.genres,
@@ -28,7 +28,7 @@ function DetailPage({ sectionActivity, reference }) {
       }
       setGameData(dataList)
       const res2 = await fetch(
-        `https://api.rawg.io/api/games/${detail}/screenshots?key=a4d3a18a2a4f4409b68fdbede271138d`
+        `https://api.rawg.io/api/games/${detail}/screenshots?key=e04c7205173549438db3ea11f6455655`
       )
       const data2 = await res2.json()
       setScreenshots(data2.results)
