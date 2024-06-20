@@ -7,7 +7,6 @@ This is a game showcasing web-application built with React.JS, Spring and MySQL.
 GameBox: https://leochow6590.github.io/GameBox/index.html
 
 #Main Features:
-
 - A Swiper Window displays featured games on the Homepage with loop effect.
 - Display games as block items in different pages.
 - Searching, sorting and filtering options for games.
@@ -15,7 +14,7 @@ GameBox: https://leochow6590.github.io/GameBox/index.html
 - Add to/Remove from favorite by clicking top-right button of game blocks.
 
 #Work in Progess:
-
 - Complete the responsive layout.
 - Add login/out feature supported by Spring and MySQL.
 - Incorporate "Add to/Remove from favorite" feature in database.
+
